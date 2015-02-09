@@ -1,0 +1,107 @@
+﻿<!DOCTYPE HTML>
+<html> 
+<head>
+<meta charset="utf-8">
+
+<title>Web前端开发工程师夏青的经验积累之兼容IE6</title>
+<meta name="Keywords" content="夏青工作经验，css经验" >
+<meta name="Description" content="夏青作为一名前端开发人精通HTML+CSS网页布局与样式，熟练使用HTML5与CSS3.0。制作出页面能兼容各种主流浏览器。例如IE6、IE8、Fire Fox、Opera等" />
+
+
+<script type="text/javascript" src="js/mobi.js"></script>
+<script type="text/javascript" src="js/ie6.js"></script>
+<script type="text/javascript"  src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/changeSkin.js"></script>
+<script type="text/javascript" src="js/fisheye-iutil.min.js"></script>
+<script type="text/javascript" src="js/nav.js"></script>
+<script type="text/javascript" src="js/toTop.js"></script>
+
+<script type="text/javascript" src="js/experience.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/skin5.css" id="skin">
+ <link rel="icon" href="images/xiaqing.gif" type="image/gif" />
+</head>
+<body>
+<div id="top">
+
+  <div class="right-sidebar">
+    <ul id="choose-skin">
+      <li data-theme="skin1" class="mosaic">mosaic</li>
+      <li data-theme="skin2" class="wall">wall</li>
+      <li data-theme="skin3" class="prairie">prairie</li>
+      <li data-theme="skin4" class="sky">sky</li>
+      <li data-theme="skin5" class="ink cur">ink</li>
+    </ul>
+    
+   </div>
+  
+  
+  <h1 id="logo"><a href="index.html"><img src="images/logo.png" width="227" height="64" alt="夏青-前端开发" /></a></h1>
+  <div id="nav">
+    <div class="dock-container"> <a href="index.htm"><span>我的首页</span><img src="images/home.png" alt="我的首页" /></a> <a href="work-style1.htm"><span>我的作品</span><img src="images/portfolio.png" alt="我的作品" /></a> <a href="javascript.htm"><span>我的经验</span><img src="images/history.png" alt="我的经验" /></a> <a href="book.htm"><span>我的书架</span><img src="images/book.png" alt="我的书架" /></a> <a href="resume.htm"><span>我的简历</span><img src="images/calendar.png" alt="我的简历" /></a> <a href="contact.htm"><span>与我联系</span><img src="images/email.png" alt="与我联系" /></a> </div>
+  </div>
+     
+  <div id="my-head"><img src="images/head.png" width="510" height="253" /></div>
+  </div>
+<div id="left-hand" class="animated pulse"><img src="images/LeftSideHand.png" width="202" height="429" /></div>
+<div id="right-hand" class="animated fadeInUpBig"><img src="images/RightSideHand.png" width="369" height="446" /></div>
+<a id="to-top" href="#top"></a> 
+<ul id="experience-nav">
+	<li><a href="javascript.htm">JavaScript</a></li>
+	<li><a href="jquery.htm">jQuery</a></li>
+	<li><a href="ie6.htm">IE6</a></li>
+	<li><a href="htmlcss.htm">HTML+CSS</a></li>
+	<li><a href="usefulsites.htm">常用网站</a></li>
+</ul>
+
+<div id="main"> 
+	<h2>经验积累之兼容&nbsp;<strong>IE6</strong></h2>
+	<div id="experience" class="animated fadeInRight">
+		<dl>
+			<dt>IE6下图片缩放失真解决方法</dt>
+			<dd> &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;<br>
+				&lt;!--[if IE 6]&gt;<br>
+				&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xmlns:v=&quot;urn:schemas-microsoft-com:vml&quot;&gt;<br>
+				&lt;![endif]--&gt;<br>
+				&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;<br>
+				&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;<br>
+				&lt;head&gt;<br>
+				&lt;title&gt;VML&lt;/title&gt;<br>
+				&lt;!--[if IE 6]&gt;<br>
+				&lt;style type=&quot;text/css&quot;&gt;<br>
+				.vml{ behavior: url(#default#VML);}<br>
+				.iefix {display:none!important;}<br>
+				&lt;/style&gt;<br>
+				&lt;![endif]--&gt;<br>
+				&lt;style type=&quot;text/css&quot;&gt;<br>
+				img.iefix {-ms-interpolation-mode: bicubic;}<br>
+				&lt;/style&gt;<br>
+				&lt;/head&gt;<br>
+				&lt;body&gt;<br>
+				&lt;!--[if IE 6]&gt;<br>
+				&lt;v:image src=&quot;1.jpg&quot; class=&quot;vml&quot; style=&quot;width:500px;height:400px;display:block&quot; /&gt;<br>
+				&lt;![endif]--&gt;<br>
+				&lt;img src=&quot;1.jpg&quot; class=&quot;iefix&quot; style=&quot;width:500px;height:400px;display:block&quot; /&gt;<br>
+				&lt;/body&gt;<br>
+				&lt;/html&gt; </dd>
+		</dl>
+		<dl>
+			<dt>IE6PNG背景透明</dt>
+			<dd> &lt;!--[if IE 6]&gt;<br>
+				&lt;script type=&quot;text/javascript&quot; src=&quot;/js/DD_belatedPNG.js&quot; &gt;&lt;/script&gt;<br>
+				&lt;script type=&quot;text/javascript&quot;&gt;<br>
+				DD_belatedPNG.fix('.Address dl dd');<br>
+				&lt;/script&gt;<br>
+				&lt;![endif]--&gt;<br>
+				<a href="ie6/DD_belatedPNG.js">DD_belatedPNG.js</a> </dd>
+		</dl>
+	</div>
+</div>
+<div id="footer"> 
+感谢您在百忙之中抽出宝贵的时间阅读我的简历 <br>
+热切期盼　您的回复<br></div>
+ 
+ </body>
+ </html>
